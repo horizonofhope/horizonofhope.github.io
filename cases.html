@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support India's Education Integrity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background: rgba(255, 65, 108, 0.7);
+    text-align: center;
+    border-bottom: 10px solid #ff4b2b;
+}
+
+header h1 {    
+    margin-bottom: 10px;
+    color: white;
+}
+
+header p {
+    font-size: 1.2em;
+    color: white;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    color: #ff4b2b;
+}
+
+.marquee-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    width: 90%;
+    overflow: hidden;
+}
+
+.case-box {
+    display: none;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid #ff4b2b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+    padding: 20px;
+    min-width: 250px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.case-box.active {
+    display: block;
+    opacity: 1;
+}
+
+.case-box h3 {
+    color: #ff4b2b;
+    margin-bottom: 10px;
+}
+
+.case-box p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.case-button {
+    display: inline-block;
+    background-color: #ff4b2b;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.case-button:hover {
+    background-color: #ff1f1f;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ff4b2b;
+}
+
+section {
+    padding: 20px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+section h2 {
+    font-size: 1.5em;
+    color: #ff4b2b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #000000;
+    font-weight: bold;
+}
+
+.donate-section {
+    background: #ff4b2b;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.donate-button {
+    background-color: rgb(69 195 44);
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.donate-button:hover {
+    background-color: #ffe6e6;
+    transform: scale(1.05);
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #ff4b2b;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* General Button Styling */
+.button {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding for smaller buttons */
+    font-size: 0.9em; /* Smaller font size */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px; /* Slightly rounded for a modern look */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin: 5px 10px; /* Adjusted margin to space out buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    text-align: center; /* Ensure the text inside is centered */
+}
+
+/* Align buttons properly within a container */
+.button-container {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    justify-content: center; /* Center the buttons */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Donate Button */
+.button.donate {
+    background-color: rgb(69 195 44);
+    color: white;
+    border: 2px solid #5fae3f; /* Subtle border for better definition */
+}
+
+.button.donate:hover {
+    background-color: #5fae3f;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Case Details Button */
+.button.details {
+    background-color: #007bff;
+    color: white;
+}
+
+.button.details:hover {
+    background-color: #0069d9;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Status Indicators */
+.status-active {
+    background-color: #69c32e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status-settled {
+    background-color: #ffcc00;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Focus Effect for Accessibility */
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Adjusting button size for mobile responsiveness */
+@media (max-width: 600px) {
+    .button {
+        padding: 6px 12px; /* Smaller padding for small screens */
+        font-size: 0.8em; /* Smaller font size for small screens */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        align-items: center; /* Center buttons on small screens */
+    }
+}
+
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+
+    .case-box {
+        min-width: 200px;
+    }
+}
+
+    #casesTable {
+        width: 80%;               /* Adjust table width */
+        margin: 20px auto;        /* Center the table */
+        border-collapse: collapse; /* Remove any space between borders */
+        text-align: center;       /* Center text inside the table */
+    }
+
+    @media (max-width: 600px) {
+        #casesTable {
+            width: 100%;           /* Make the table full-width on small screens */
+        }
+    }
+
+/* Disclaimer styling */
+.disclaimer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.9em;
+    color: #666;
+    background-color: #fff; /* Light background for better readability */
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for separation */
+    /* z-index: 9999;  /* Ensure it stays on top of other content */
+}
+
+.disclaimer p {
+    margin: 10px 0;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+    <header>
+        <h1>🚨 INDIA’S EDUCATION SYSTEM IS UNDER ATTACK – ACT NOW! 🚨</h1>
+        <p>Support A Legal Battle That Affects Your Future!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">The Mission</a>
+        <a href="#">Active Cases</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <h1 style="text-align: center; padding: 20px;">Active Education Integrity Cases</h1>
+
+    <table id="casesTable">
+        <thead>
+            <tr>
+                <th>Case Title</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Case data will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+
+    <script>
+        fetch('data.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            const casesTable = document.getElementById('casesTable').getElementsByTagName('tbody')[0];
+    
+            data.forEach(caseData => {
+                const row = casesTable.insertRow();
+    
+                // Case Title
+                const cell1 = row.insertCell(0);
+                cell1.textContent = caseData.title;
+    
+                // Description
+                const cell2 = row.insertCell(1);
+                cell2.textContent = caseData.description;
+    
+                // Case Status
+                const cell3 = row.insertCell(2);
+                const statusElement = document.createElement('span');
+                if (caseData.status === 'Active') {
+                    statusElement.classList.add('status-active');
+                    statusElement.textContent = 'Active';
+                } else if (caseData.status === 'Settled') {
+                    statusElement.classList.add('status-settled');
+                    statusElement.textContent = 'Settled';
+                } else {
+                    statusElement.textContent = 'Unknown Status';
+                }
+                cell3.appendChild(statusElement);
+    
+                // Actions (Buttons)
+                const cell4 = row.insertCell(3);
+    
+                // Case Details Button
+                const detailsButton = document.createElement('a');
+                detailsButton.href = caseData.detailsButtonLink;
+                detailsButton.classList.add('button', 'details');
+                detailsButton.textContent = 'Case Details';
+                detailsButton.target = ""; // Open in a new tab
+    
+                // Donate Now Button
+                const donateButton = document.createElement('a');
+                donateButton.href = caseData.donateLink;
+                donateButton.classList.add('button', 'donate');
+                donateButton.textContent = 'Donate Now';
+                donateButton.target = ""; // Open in a new tab                     
+    
+                // Append buttons to the actions cell
+                cell4.appendChild(detailsButton);
+                cell4.appendChild(donateButton);                
+            });
+        })
+        .catch(error => console.error('Error loading data:', error));
+    </script>
+
+<div class="disclaimer">
+    <p><strong>Disclaimer:</strong></p>
+    <p>This portal do not have any malafide intentions for any individual, institution, or entity. All information presented here is based on allegations and the documents provided are for informational purposes only. The contents are subject to legal verification and due process. Any legal consequences arising from the case should be addressed in a court of law.</p>
+</div>
+    
+
+</body>
+</html>

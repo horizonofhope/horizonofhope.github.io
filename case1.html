@@ -1,0 +1,294 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Details: University Fraud</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Header styles */
+        header {
+            background: rgba(255, 65, 108, 0.85);
+            text-align: center;
+            /*padding: 40px 0;*/
+            border-bottom: 10px solid #ff4b2b;
+            /*margin-bottom: 20px;*/
+            border-radius: 8px;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: white;
+        }
+
+        /* Navigation styling */
+        nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            color: white;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #333;
+            margin: 0 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: #ff4b2b;
+            transform: scale(1.05);
+        }
+
+        /* Main content styles */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #ff4b2b;
+            margin-bottom: 15px;
+        }
+
+        .case-details {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .case-details:hover {
+            transform: translateY(-10px);
+        }
+
+        .case-details h2 {
+            font-size: 1.6em;
+            margin-bottom: 12px;
+        }
+
+        .case-details p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .case-details ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .case-details ul li {
+            margin-bottom: 15px;
+        }
+        
+        .documents-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 15px;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        .documents-link a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Disclaimer styling */
+        .disclaimer {
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .disclaimer p {
+            margin: 10px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            nav a {
+                font-size: 1em;
+                margin: 0 15px;
+            }
+
+            .case-details p {
+                font-size: 1em;
+            }
+
+            .documents-link a {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .case-details {
+                padding: 15px;
+            }
+        }
+
+        /* General Button Styling */
+.button {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding for smaller buttons */
+    font-size: 0.9em; /* Smaller font size */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px; /* Slightly rounded for a modern look */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin: 5px 10px; /* Adjusted margin to space out buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    text-align: center; /* Ensure the text inside is centered */
+}
+
+/* Align buttons properly within a container */
+.button-container {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    justify-content: center; /* Center the buttons */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Donate Button */
+.button.donate {
+    background-color: rgb(69 195 44);
+    color: white;
+    border: 2px solid #5fae3f; /* Subtle border for better definition */
+}
+
+.button.donate:hover {
+    background-color: #5fae3f;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        
+        <p>Support A Legal Battle That Affects Your Future!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">The Mission</a>
+        <a href="cases.html">Active Cases</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <h1>Case Details: Alleged Illegal appointment at Central University of Haryana.</h1>
+        
+
+        <p><strong>Petitioner's Statement and Call to Action:</strong> <a href="helpcase1.html" class="button donate" target="">Donate Now</a> </p>
+        <p>"Myself Pawan Sharma (pawan1574@gmail.com, +91 9255948250). I have challenged the illegal appointment of <strong>Rajeev Kumar Singh as Professor in the Department of Political Science at the Central University of Haryana. </strong> This appointment was made under false pretenses. The appointed individual was himself serving as the head of recruitment in the department and manipulated the process to secure his own selection as a professor.
+
+                Through RTI information, I have exposed his corrupt practices. He <strong>misled the Central University of Haryana, ICSSR, and CUJ </strong>with false information to obtain the position. As a result, I have filed a legal challenge against his appointment in the Punjab and Haryana High Court. Additionally, I have challenged his appointment in the Mahendergarh District Court, which has already registered an FIR against him.
+                
+                However, he is <strong> using his financial influence to manipulate the system </strong>. To continue this fight against corruption and ensure justice, I need public support. I am raising funds to cover legal expenses and sustain this battle against an unlawful appointment. Your support will help uphold fairness and transparency in academic institutions."</p>
+        <br>
+        <div class="documents-link">
+            <p><strong>Documents Related to the Case:</strong></p>
+            <ul>
+                <li><a style="color: orangered;" href="https://www.tribuneindia.com/news/haryana/court-orders-registration-of-fir-against-varsity-prof-596013/" target="_blank">Media Outlet: Court orders registration of FIR against Central University of Haryana professor</a></li>
+                <li><a style="color: orangered;" href="https://www.etvbharat.com/english/state/haryana/central-university-of-haryana-embroiled-in-a-row-over-professors-appointment/na20230529190140950950916" target="_blank">Media Outlet: Central University of Haryana embroiled in a row over professor's appointment</a></li>
+                <li><a href="attachcase11.pdf" target="_blank">ICSSR Retraction of Certification</a></li>
+                <li><a href="attachcase14.pdf" target="_blank">Fellowship Amount Document</a></li>
+                <li><a href="attachcase12.pdf" target="_blank">CU Jharkhand Experience Certificate Retraction</a></li>
+                <li><a href="attachcase13.pdf" target="_blank">Application Form with alleged misleading Information</a></li>
+            </ul>
+            <br>
+        </div>
+        
+        <div class="case-details">
+            
+            <h2>Facts of the Case:</h2>
+            <p><strong>1. Alleged Illegal Appointment of Rajeev Kumar Singh:</strong></p>
+            <p>The appointment of Rajeev Kumar Singh as a Professor In Department of Political Science at the Central University of Haryana (CUH) is alleged to be based on fraudulent and misleading documents. These documents are said to have been created through corrupt means to facilitate his appointment. The claims regarding the fraudulent nature of these documents are substantiated by information obtained under the Right to Information (RTI) Act from the Indian Council of Social Science Research (ICSSR) and the Central University of Jharkhand (CUJ). Both institutions have confirmed these allegations.</p>
+
+            <p><strong>2. Retraction of Documents:</strong></p>
+            <p>The documents used to support Rajeev Kumar Singh's appointment have been allegedly retracted or rejected by the concerned institutes. Both the ICSSR and CUJ have withdrawn their previous support for these documents. However, attempts to protect Rajeev Kumar Singh from accountability are still reportedly underway.</p>
+
+            <p><strong>3. Details of Allegedly Fraudulent Documents:</strong></p>
+            <ul>
+                <li><strong>(a) ICSSR Certification:</strong> The certificate Rajeev Kumar Singh used to support his appointment has been allegedly retracted by the ICSSR. Prior to this, the ICSSR issued multiple letters asking for an explanation regarding the false and fabricated information he had submitted to obtain the certificate. His response suggested that the fault lay with ICSSR for not verifying the misleading information he provided.</li>
+                <li><strong>(b) Document on Fellowship Amount:</strong> Rajeev Kumar Singh allegedly submitted a document claiming he was receiving ₹28,000 per month in fellowship, while in reality, he was receiving ₹18,000 per month. The head of the Sociology Department, from whom he allegedly extracted this document, has detailed how Rajeev Kumar Singh tricked him into signing a letter that he had prepared himself.</li>
+                <li><strong>(c) CU Jharkhand Experience Certificate:</strong> The Central University of Jharkhand (CUJ) had allegedly issued a certificate for Rajeev Kumar Singh’s employment as an Assistant Professor. This certificate has since been retracted by CUJ, and they have revealed the actual details of his employment, which contradict the fraudulent information he had provided.</li>
+            </ul>
+
+            <p><strong>4. Alleged False Information in Application Forms:</strong></p>
+            <p>Rajeev Kumar Singh’s application form reportedly contains false information regarding dates, durations, and emoluments. In addition, there are discrepancies regarding overlapping dates across various documents he submitted, suggesting deliberate manipulation of the records.</p>
+
+            <p><strong>5. Request for Investigation:</strong></p>
+            <p>The case calls for a comprehensive investigation by the Anti-Corruption Bureau (ACB) Gurugram, as this situation may be one of the largest alleged academic frauds ever committed in recruitment processes at a central university. Despite mounting evidence, it is believed that officials at the Central University of Haryana have been actively protecting Rajeev Kumar Singh, hindering any real action from being taken.</p>
+        </div>
+
+        
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong></p>
+            <p>This portal do not have any malafide intentions for any individual, institution, or entity. All information presented here is based on allegations and the documents provided are for informational purposes only. The contents are subject to legal verification and due process. Any legal consequences arising from the case should be addressed in a court of law.</p>
+        </div>
+    </div>
+
+
+
+</body></html>
